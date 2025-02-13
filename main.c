@@ -7,7 +7,10 @@ int main(void) {
         printf("Errore durante l'apertura del file");
     }
     float velocita;
-    for (int i = 0; i < 10; i++) {
+    int n;
+    fscanf(myFile, "%d", &n);
+    printf("ci sono %d velocita':\n",n);
+    for (int i = 0; i < n; i++) {
         fscanf(myFile, "%f", &velocita);
         printf("velocita %.1f", velocita);
         if (velocita > 50) {
